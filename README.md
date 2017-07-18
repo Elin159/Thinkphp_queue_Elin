@@ -20,8 +20,8 @@ addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->pus
 php artisan /Home/queue listen:email;<br>
 
 ###延迟执行:<br>
-addJoe::Joe(new SmallStick($data['user_id'],$data['admin_id'],$consume_id))->delay(3)->push();<br>
+addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->push();<br>
 
 ###指定队列执行:<br>
-addJoe::Joe(new SmallStick($data['user_id'],$data['admin_id'],$consume_id))->delay(3)->onQueue('small_stack')->push();<br>
+addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->onQueue('email')->push();<br>
 
