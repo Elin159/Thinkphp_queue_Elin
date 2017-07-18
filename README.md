@@ -25,3 +25,12 @@ addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->del
 ###指定队列执行:<br>
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->onQueue('email')->push();<br>
 
+
+队列业务流程
+=====
+本队列默认redis密码为:password 端口为:6379 地址为:127.0.0.1
+----
+如果修改可通过 php artisan /Home/queue make:queue name 创建的队列业务文件头部加入属性<br>
+public $host = '127.0.0.1';<br>
+public $port = '6379';<br>
+public $password = 'password';<br>
