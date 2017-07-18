@@ -34,3 +34,7 @@ addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->del
 public $host = '127.0.0.1';<br>
 public $port = '6379';<br>
 public $password = 'password';<br>
+<br>
+后期待完善功能
+------
+后期再说
