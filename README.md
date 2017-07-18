@@ -28,8 +28,13 @@ addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->del
 
 队列业务流程
 =====
-本队列默认redis密码为:password     端口为:6379      地址为:127.0.0.1<br>
+本队列默认设置<br>
 ----
+
+* redis密码为:password
+* 端口为:6379
+* 地址为:127.0.0.1
+<br>
 <br>
 如果修改可通过 php artisan /Home/queue make:queue name 创建的队列业务文件头部加入属性<br><br>
 
