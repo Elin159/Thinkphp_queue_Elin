@@ -10,9 +10,19 @@ namespace Org\Job;
 
 use Redis;
 
+/**
+ * 实现核心功能
+ * Class Execute
+ * @package Org\Job
+ */
 abstract class Execute implements JoeQueue {
 
     public $redis;
+
+    /**
+     * 初始化，连接redis数据库
+     * Execute constructor.
+     */
     public function __construct()
     {
         $redis = new Redis();
@@ -38,7 +48,7 @@ abstract class Execute implements JoeQueue {
 
     /**
      * 运行队列
-     * @param $listKey
+     * @param string $listKey 队列名称
      */
     public function runQueue($listKey = 'default')
     {
@@ -74,6 +84,9 @@ abstract class Execute implements JoeQueue {
         }
     }
 
+    /**
+     * 监听队列
+     */
     public function run()
     {
         while(1) {

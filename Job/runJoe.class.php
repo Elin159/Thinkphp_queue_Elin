@@ -10,6 +10,9 @@ namespace Org\Job;
 
 class runJoe extends Jobs {
 
+    /**
+     * 执行队列(php_cli模式进行)
+     */
     public function execute()
     {
         // TODO: Implement execute() method.
