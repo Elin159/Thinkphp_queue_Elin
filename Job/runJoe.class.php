@@ -7,15 +7,20 @@
  */
 
 namespace Org\Job;
-
+if (!IS_CLI)  die('The file can only be run in cli mode!');
 class runJoe extends Jobs {
 
-    /**
-     * 执行队列(php_cli模式进行)
-     */
+    public $listKey;
+
+    public function __construct($listKey = 'default')
+    {
+        parent::__construct();
+        $this->listKey = $listKey;
+    }
+
     public function execute()
     {
         // TODO: Implement execute() method.
-        $this->run();
+        $this->run($this->listKey);
     }
 }
