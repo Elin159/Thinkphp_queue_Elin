@@ -76,7 +76,12 @@ abstract class Execute implements JoeQueue {
 
     public function run($listKey = 'default')
     {
+        $i = 0;
         while(1) {
+            $i++;
+            if($i%20) {
+                sleep(1);
+            }
             $this->runQueue($listKey);
         }
     }
