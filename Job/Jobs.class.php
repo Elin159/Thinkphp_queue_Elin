@@ -12,7 +12,7 @@ namespace Org\Job;
 abstract class Jobs extends Execute {
     protected     $time = 0; //延迟多少秒后执行
     protected   $attempts = 0; //尝试多少次后放弃执行 0为不放弃
-    public $host = '120.77.15.21';
+    public $host = '127.0.0.1';
     public $port = '6379';
     public $password = 'password';
 
