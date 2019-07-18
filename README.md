@@ -1,6 +1,6 @@
 Thinkphp_queue_Elin
 ====
-#部分边角功能尚未开发完成, 请自行选择是否在生产环境使用<br>
+# 部分边角功能尚未开发完成, 请自行选择是否在生产环境使用<br>
 <br>
 描述
 ----
@@ -13,16 +13,16 @@ listen 命令：该命令将会创建一个listen父进程,然后父进程通过
 <br>
 
 ##项目代码
-###例子:<br>
+### 例子:<br>
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->push();<br>
 
-###执行监听:<br>
+### 执行监听:<br>
 php artisan /Home/queue listen:email;<br>
 
-###延迟执行:<br>
+### 延迟执行:<br>
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->push();<br>
 
-###指定队列执行:<br>
+### 指定队列执行:<br>
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->delay(3)->onQueue('email')->push();<br>
 
 
