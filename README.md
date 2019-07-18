@@ -13,7 +13,7 @@ listen 命令：该命令将会创建一个listen父进程,然后父进程通过
 <br>
 <br>
 
-##项目代码
+## 项目代码
 ### 例子:<br>
 addJoe::Joe(new SendMail($data['user_id'],$data['email'],$data['content']))->push();<br>
 
